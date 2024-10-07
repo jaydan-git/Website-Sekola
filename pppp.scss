@@ -1,0 +1,415 @@
+// Warna dan Variabel
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$light-bg: #f8f9fa;
+$dark-bg: #222;
+$error-color: #e74c3c;
+$text-color: #333;
+$hover-color: darken($primary-color, 10%);
+$transition-time: 0.3s;
+
+// Reset margin dan padding
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Body
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
+    padding-top: 70px;
+    background-color: $light-bg;
+}
+
+// Navbar
+.navbar {
+    background-color: $light-bg;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color $transition-time ease;
+    
+    .nav-link {
+        color: $text-color;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: color $transition-time ease;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .navbar-brand {
+        color: $primary-color;
+        padding: 10px 0;
+        letter-spacing: 1px;
+    }
+
+    .navbar-toggler {
+        border-color: $primary-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='#3498db' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
+
+// Hero Section
+#hero {
+    height: 100vh;
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        animation: fadeInDown $transition-time ease-in-out;
+    }
+    
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        animation: fadeInUp $transition-time ease-in-out;
+    }
+    
+    .btn-primary {
+        background-color: $secondary-color;
+        border: none;
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+        transition: background-color $transition-time ease-in-out;
+        
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+// About Section
+#about {
+    padding: 60px 0;
+    .container {
+        .row {
+            .col-md-6 {
+                img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    transition: transform $transition-time ease-in-out;
+                    
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Galeri Section
+#gallery {
+    background-color: $light-bg;
+    padding: 60px 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    img {
+        border-radius: 10px;
+        transition: transform $transition-time ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Kontak Section
+#contact {
+    padding: 60px 0;
+
+    .form-control {
+        border-radius: 5px;
+        transition: border-color $transition-time ease-in-out;
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        transition: background-color $transition-time ease-in-out;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+// Blog Section
+#blog {
+    background-color: $light-bg;
+    padding: 60px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .row .col-md-4 {
+        transition: transform $transition-time ease-in-out;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+// Table Section
+#table {
+    padding: 60px 0;
+
+    table {
+        thead {
+            background-color: $primary-color;
+            color: white;
+
+            th {
+                padding: 10px;
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: $hover-color;
+                    color: white;
+                }
+
+                td {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+// Login Page
+#login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-bg;
+
+    .login-box {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        
+        h2 {
+            margin-bottom: 30px;
+            color: $primary-color;
+            font-weight: 700;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border-color $transition-time ease-in-out;
+
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color $transition-time ease-in-out;
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+
+        p {
+            margin-top: 20px;
+            color: $text-color;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color $transition-time ease-in-out;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+// 404 Section
+#error {
+    background-color: $dark-bg;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: 20px;
+        animation: fadeIn $transition-time ease-in-out;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        animation: fadeIn $transition-time ease-in-out;
+    }
+
+    a {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color $transition-time ease-in-out;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+// Animations
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// Footer
+footer {
+    background-color: $dark-bg;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: $primary-color;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: color $transition-time ease-in-out;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            a {
+                margin: 0 10px;
+                font-size: 1.5rem;
+                color: white;
+                transition: transform $transition-time ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    color: $secondary-color;
+                }
+
+                i {
+                    transition: color $transition-time ease-in-out;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
